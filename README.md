@@ -1,9 +1,53 @@
-*EXPERIMENTAL VIRUS*
-hello brain-dead github users. if you are a brain dead github user you probably know how to setting this up. if you are not follow the instructions.txt file
-<br>
-it is supposed to run a loop on each core of your processor to crash it
-<br>
-It isnt really a virus more like a a one time crash
-<br>
-it also has a tkinter gui very cool wowowow
-<br>
+
+# **black_plague.exe**
+
+### *Proceed if you have 0 brain cells *
+
+welcome dearest **brain-dead GitHub users**.
+If you're one of the enlightened few who already know how to set this up, idk can you ask chatgpt to fill ts part
+
+If not?
+`instructions.txt`
+===========================================================================================
+
+## What This "Virus" Actually Does
+
+This isn’t a real virus — calm down, antivirus enjoyers.
+
+It simply:
+
+* overloads each core with a useless loop
+* Burns your processor 🔥
+* **Crashes your system *once*** (it will not actually work like the black plague)
+* Comes with a **GUI** because i believe malware should have ✨ aesthetics ✨
+
+So yeah, **very experimental, very silly, very fun**.
+
+===========================================================================================
+
+## Features
+
+* ## *smegsy* CPU overload
+* super cool Tkinter GUI wowowowow
+* engineered for people who like ## devan
+===========================================================================================
+
+## Running It
+
+If you don’t know what you're doing:
+**Read `instructions.txt`**
+If you *do* know what you're doing:
+idk bro
+
+---
+
+## Final Warning
+
+Running this will prolly:
+
+* Freeze your PC
+* Crash your OS
+* Make your fans sound like a jet
+* Cause you to contemplate your life choices
+---
+
