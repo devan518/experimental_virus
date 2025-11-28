@@ -4,3 +4,4 @@ dist/* linguist-vendored
 *.toc linguist-generated
 *.zip linguist-generated
 *.pkg linguist-generated
+*.html linguist-generated
