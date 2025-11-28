@@ -1,6 +1,6 @@
 
 # DO AT YOUR OWN RISK
-## read terms and conditions before activating virus after downloading, and no downloading it would not activate immediatally. 
+#### read terms and conditions before activating virus after downloading, and no, downloading it would not activate immediatally. 
 ###### When you open the file and run, it will have 2 confirm buttons, the last one will run it
 
 ### **black_plague.exe**
@@ -58,6 +58,7 @@ Running this will prolly:
 * Make your fans sound like a jet
 * Cause you to contemplate your life choices
 ---
+
 
 
 
