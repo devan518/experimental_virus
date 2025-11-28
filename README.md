@@ -1,8 +1,6 @@
 
 # **black_plague.exe**
 
-### *Proceed if you have 0 brain cells *
-
 welcome dearest **brain-dead GitHub users**.
 If you're one of the enlightened few who already know how to set this up, idk can you ask chatgpt to fill ts part
 
@@ -12,9 +10,9 @@ If not?
 
 ## What This "Virus" Actually Does
 
-This isn’t a real virus — calm down, antivirus enjoyers.
+ts isn’t a real virus
 
-It simply:
+It js:
 
 * overloads each core with a useless loop
 * Burns your processor 🔥
@@ -50,4 +48,5 @@ Running this will prolly:
 * Make your fans sound like a jet
 * Cause you to contemplate your life choices
 ---
+
 
