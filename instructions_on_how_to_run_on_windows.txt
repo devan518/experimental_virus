@@ -1,0 +1,29 @@
+BEFORE YOU READ*
+anything inside of the quoted marks you are not copy and pasting
+only copy and paste what is inside
+
+HOW TO INSTALL:
+just for u twin
+-----------------------------------------------------------------------------------------------------
+STEP 1:
+go to search bar and type cmd
+if you see command prompt do not run it
+instead click "run as administrator"
+after that type in 
+"cd C:\Users\YourName\Downloads\black_plague"
+the part with your name replace with the name you have on windows (you can check in file explorer if u go to same path)
+you might have to change but if its in downloads folder it shld work
+------------------------------------------------------------------------------------------------------
+STEP 2:
+type in "install.bat"
+
+ask chatgpt why it isn't working if it isn't working bc thats a problem on your pc or u screw up a step
+
+if nothing happens restart the whole process from step one
+------------------------------------------------------------------------------------------------------
+STEP 3:
+run the file in dist saying main.exe or sum shit
+
+
+
+

@@ -1,0 +1,45 @@
+BEFORE YOU READ*
+anything inside of the quoted marks you are not copy and pasting
+only copy and paste what is inside
+
+HOW TO INSTALL:
+just for u twin
+-----------------------------------------------------------------------------------------------------
+STEP 1:
+OPEN THE .sh FILE NAMED "install_for_mac.sh" by clicking command + space and type in "Terminal"
+
+hit ENTER on your keyboard
+
+type in 
+
+"cd"
+in the terminal, then drag and drop the .sh file into the terminal
+------------------------------------------------------------------------------------------------------
+STEP 2:
+type in "chmod +x install.sh"
+
+⚠️ IMPORTANT — macOS might still block it once
+
+If macOS shows a popup:
+
+“install.sh cannot be opened because it is from an unidentified developer.”
+
+then:
+
+Open System Settings
+
+Go to Privacy & Security
+
+Scroll down — macOS will show:
+“install.sh was blocked from running”
+
+Click Allow Anyway
+
+Then run again:
+if nothing happens restart the whole process from step one
+------------------------------------------------------------------------------------------------------
+STEP 3:
+run the file in dist saying main.app or sum shit
+if it says .exe then i am an idiot and need to resend
+
+
