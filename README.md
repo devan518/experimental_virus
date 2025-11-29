@@ -38,7 +38,7 @@ So yeah, **very experimental, very silly, very fun**.
 
 * ## *smegsy* CPU overload
 * super cool Tkinter GUI wowowowow
-* engineered for people who like ## devan
+* engineered for people who are super cool
 
 
 ## Running It
@@ -58,6 +58,7 @@ Running this will prolly:
 * Make your fans sound like a jet
 * Cause you to contemplate your life choices
 ---
+
 
 
 
