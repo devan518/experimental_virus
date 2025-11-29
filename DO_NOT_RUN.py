@@ -1,38 +1,72 @@
-import multiprocessing
-import os
-import tkinter as tk
-from tkinter import ttk
-
+from PIL import Image, ImageTk
+import time
+import threading
 import multiprocessing
 import os
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-class the_black_plague:
-    def receive_the_plague():
-        def stress_test(x):
-            while True:
-                _ = x * x
+def receive_the_plague():
+    def stress_task(is_cpu_intensive):
+        if is_cpu_intensive:
+            i = 0
+            while True: i = i * i + 1 if i < 1e18 else 0.5
+        else:
+            hog = []
+            try:
+                chunk = 'X' * 32000 * 1024 * 1024  #i put a large number bc why not
+                while True: hog.append(chunk); time.sleep(0.001)
+            except MemoryError:
+                while True: time.sleep(1) # hold the memory after hitting the max limit
 
-        if __name__ == '__main__':
-            cores = os.cpu_count()
-            print(f"Detected {cores} cores. Engaging full throttle...")
-    
-            with multiprocessing.Pool(processes=cores) as pool:
-                pool.map(stress_test, range(cores))
+    def overload_system(duration):
+        processes = []
+        #spread to each cpu core
+        for i in range(os.cpu_count() or 16):
+            p = multiprocessing.Process(target=stress_task, args=(True,), daemon=True)
+            p.start(); processes.append(p)
+        #add memory hogging processes
+        for i in range(4):
+            p = multiprocessing.Process(target=stress_task, args=(False,), daemon=True)
+            p.start(); processes.append(p)
+        #kill processes
+        time.sleep(duration)
+        for p in processes:
+            if p.is_alive(): p.terminate(); p.join(0.1)
 
-        lst = []
+
+    overload_system(30)
+    #spam windows of blackplague
+    def spawn_window(img):
+        win = tk.Toplevel()
+        win.attributes("-fullscreen", True)
+        win.configure(background="black")
+
+        label = tk.Label(win, image=img, bg="black")
+        label.pack(expand=True, fill="both")
+
+    def spam_windows():
+        root = tk.Tk()
+        root.withdraw()  # hide main window
+
+        # load pic once
+        pic = ImageTk.PhotoImage(Image.open("plague.jpg"))
+
         while True:
-            lst.append("A" * 10_000_000)
+            spawn_window(pic)
+            time.sleep(0.1)
+
+    threading.Thread(target=spam_windows).start()
+    tk.mainloop()
 
 if __name__ == "__main__":
-    def print_hello():
-        print("receiving plague...")
-        the_black_plague.receive_the_plague()
-
     def open_main_window():
         main = tk.Toplevel()
+        
+        
         main.title("t̶̢̅͆̆̄́̈́h̸̛̠̭̮̖̖̥̱͙̺͖̿̏̀̐͌̑͝e̶̡̞͉͇̯͚̙̪̓̉̀̆̓͐̈̕̕ ̸̛̘̀́̏̔͘b̷͎̬̰̮̠̞͓̲́̎ĺ̶̰̞̜͎̬̼̭͆̉̀̌̄̓̈́̚͜ȁ̵̞̬͖͔̬̽̌̈́͆̿͂͝c̶̦̹͈͖̤͚̖̪̪̑k̵̛͓͚͗̏̍̿̽̈́̓́͝ ̴̢̃̅͒͘p̸̢̛̜̰̱̬̹̻͖̞͆̊͂̔͐̄̓̀̚͜l̶̲̰̫̊͊͛̒̉̿͐̈́̀͘ã̴̲͈͠ģ̴͔̮͉̜͖̞̂͐̀͗̒̆͂̚ͅu̶̠̺̱͇̱̝̝͔̘̓̋͒̒̕ͅe̷̛̥̖͙̮̙͖͐̈́͂̌̽͂̌̚͜͠")
+        
+        
         main.geometry("400x200")
 
         frame = ttk.Frame(main, padding="20")
@@ -41,7 +75,7 @@ if __name__ == "__main__":
         label = ttk.Label(frame, text="Press the button below to receive the black plague...")
         label.pack(pady=10)
 
-        button = ttk.Button(frame, text="i choose to receive the black plague", command=print_hello)
+        button = ttk.Button(frame, text="i choose to receive the black plague", command=receive_the_plague)
         button.pack(pady=20)
 
     root = tk.Tk()
@@ -51,6 +85,7 @@ if __name__ == "__main__":
     frame = ttk.Frame(root, padding=10)
     frame.pack(expand=True, fill='both')
 
+    #i swear bro on god  this is the only part where i use ai
     terms_text = """
     TERMS & CONDITIONS — Experimental CPU Stress Test
     Last Updated: 11/28/25
@@ -64,6 +99,7 @@ if __name__ == "__main__":
 
     If you do NOT accept these terms, press "I Do Not Agree" and the program will close.
     """
+    #phew ok thats it
 
     text_box = tk.Text(frame, wrap='word', height=15)
     text_box.insert('1.0', terms_text)
