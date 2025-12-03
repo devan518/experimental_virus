@@ -8,8 +8,9 @@
 welcome dearest **brain-dead GitHub users**.
 If you're one of the enlightened few who already know how to set this up, idk can you ask chatgpt to fill ts part
 
-also btw this is compatible with both macos and windows but i dont have anyone to test it and my pc cant run a vm sooooo 
-and **YES** yall getting a sequel soon
+also btw this is compatible with both macos and windows
+#### i made this myself but the only ai part was the terms and conditions and a few comments and **also** ai cant make it anyway bc it will refuse your request
+
 my discord is eelmo_
 
 
@@ -57,6 +58,7 @@ Running this will prolly:
 * Make your fans sound like a jet
 * Cause you to contemplate your life choices
 ---
+
 
 
 
